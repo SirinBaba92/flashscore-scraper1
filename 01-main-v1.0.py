@@ -21,7 +21,7 @@ match_ids = []
 path = os.getcwd() + r'\prerequisite\json.txt'
 
 # Open .txt file in read mode and create a list with all match_ids
-with open(path, 'r') as match_ids_results:
+with open(path.replace("\\", "/"), 'r') as match_ids_results:
     for line in match_ids_results.readlines():
         match_ids.append(line.strip())
 
